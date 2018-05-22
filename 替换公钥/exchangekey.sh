@@ -1,0 +1,14 @@
+#! /bin/bash
+
+# add used keys
+cat << EFO >> /root/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCty2TjIIHp3342ddfqefd3joVK8DyGzDSZk/H2rR3CMkRaoYcgtjH1/7BLwDJIveN2yvOEWdNWOqtgzoatR2knulp0RC6aaaaaaaaaaaaaaaaaaaaaaddddddddddddddddddddddddNNnwqWrfF5sjiW+qzwnRa9OWai4GUxpWPBLyTP0bCfnYXTmRmww3IoN1x4j6uGSztx2yS3OP0pauv9fRiPr9xWQOgudhzqBqIWPvDueMvf1FreKGQS9Fo/h5VZt7Z84o8HmGBxg1gwWqWTf8e9dfadfa3efsafwfsadfqawefasfwefadfawefadefmSR2O9iKwujS5/WvTHdor6ZmwTf key-1
+EFO
+
+cat << EFO >> /home/centos/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQAdald;lajfenfahoiw3e;fjokhasoipofpoashfaslkdhfwSZk/H2rR3CMkRaoYcgtjH1/7BLwDJIveN2daeeeeeeeeeeeeeeeeeeeeeeeeeep0RC6lvc6GylGxoDHSFYAw74rJBCwwHOGIAgkaY+f6ZnEEfQiTzNNnwqWrfF5sjiW+qzwnRa9OWai4GUxpWPBLyTP0bCfnYXTmRmww3IoN1x4j6uGSztx2yS3OP0pauv9fRiPr9xWQOgudhzqBqIWPvDueMvf1FreKGQS9Fo/h5VZt7dfnalksdnklfnalkshdklfnlkasnkldnofkbiowepohwoiflaknhsofokansoihdnfaZmwTf key-1
+EFO
+
+# delete unused keys
+sed -i '/^ssh-rsa AAAAB3NzaC1aaaaaaaaaaaaaaaaaaaaaarXvnGdUlFyGdCwSRh7.*/d' /root/.ssh/authorized_keys
+sed -i '/^ssh-rsa AAAAB3NzaC1yaaaaaaaaaaaaaaaaaaaaaaaXvnGdUlFyGdCwSRh7.*/d' /home/centos/.ssh/authorized_keys

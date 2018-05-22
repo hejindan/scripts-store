@@ -1,0 +1,7 @@
+gatfile potatoroute 10.6.30.8
+gatfile k8s-etcd001 10.6.30.9
+gatfile k8s-etcd002 10.6.30.10
+gatfile k8s-etcd003 10.6.30.11
+gatfile potato-etcd001 10.6.30.12
+gatfile potato-etcd002 10.6.30.13
+gatfile potato-etcd003 10.6.30.14
